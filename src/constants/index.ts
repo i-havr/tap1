@@ -1,0 +1,2 @@
+export const AVERAGE_TAPS_PER_SECOND = 6;
+export const ENERGY_INCREASE_PER_SECOND = 3;
