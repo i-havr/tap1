@@ -11,6 +11,10 @@ import axios from 'axios';
 
 import { getRandomIntegerInRange } from 'src/helpers';
 
+import { getConfig } from '@app/config';
+
+const { CRON_PING_URL } = getConfig();
+
 import {
   AVERAGE_TAPS_PER_SECOND,
   ENERGY_INCREASE_PER_SECOND,
@@ -169,4 +173,9 @@ export class TapService {
   //     console.log('ERROR ==>', error);
   //   }
   // }
+
+  async ping() {
+    const res = await axios.get(CRON_PING_URL);
+    return `PING successful! ==> ${res.data}`;
+  }
 }

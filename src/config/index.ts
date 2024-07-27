@@ -75,6 +75,11 @@ export class ConfigDto {
   @IsString()
   @IsNotEmpty()
   FIREBASE_MEASUREMENT_ID!: string;
+
+  @Expose()
+  @IsString()
+  @IsNotEmpty()
+  CRON_PING_URL!: string;
 }
 
 export const getConfig = (): ConfigDto => {
