@@ -4,12 +4,12 @@ import { AppService } from './app.service';
 
 import { TapModule } from './modules/tap/tap.module';
 import { ScheduleModule } from '@nestjs/schedule';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { connectionOptions } from './config/ormconfig';
+// import { TypeOrmModule } from '@nestjs/typeorm';
+// import { connectionOptions } from './config/ormconfig';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot(connectionOptions),
+    // TypeOrmModule.forRoot(connectionOptions),
     TapModule,
     ScheduleModule.forRoot(),
   ],
